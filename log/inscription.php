@@ -83,6 +83,8 @@
 				<option value="1">visité ton site web seulement pour m'inspiré un peu</option>
 				<option value="2">en connaitre un peu plus sur toi pour un recrutement</option>
 				<option value="3">avoir accés à mes projets secrets</option>
+				<option value="4">des conseils</option>
+				<option value="5">un hebergement web</option>
 			  </select>
 			</div>
 		
@@ -117,6 +119,10 @@
 		<center>
 			<a href="connexion.php">
 				Déja inscrit ?
+			</a>
+			<br>
+			<a href="aide.html">
+				Besoin d'aide ?
 			</a>
 		</center>
 

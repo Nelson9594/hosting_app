@@ -26,7 +26,13 @@
 				$user = mysqli_fetch_assoc($result);
 				// vérifier si l'utilisateur est un administrateur ou un utilisateur
 				if ($user['type'] == 'admin') {
-					header('location: admin/home.php');		  
+					header('location: admin/dashboard/mazer/dist/index.php');		  
+				}
+				elseif($user['motif'] == '4'){
+					header('location: conseil/index.html');
+				}
+				elseif($user['motif'] == '5'){
+					header('location: hebergement/index.html');
 				}else{
 					header('location: index.php');
 				}
@@ -53,7 +59,7 @@
 		  
 			<center>
 				<div class="col-12">
-					<button type="submit" class="btn btn-primary">C'est partis</button>
+					<button type="submit" class="btn btn-primary">C'est partis !</button>
 				</div>
 			</center>
 			
@@ -61,14 +67,20 @@
 		
 		<br>
 
-		<?php if (! empty($message)) { ?>
-			<p class="errorMessage"><?php echo $message; ?></p>
-		<?php } ?>
+		<center>
+			<?php if (! empty($message)) { ?>
+				<p class="errorMessage"><?php echo $message; ?></p>
+			<?php } ?>
+		</center>
 
 		
 		<center>
 			<a href="inscription.php">
 				Pas encore inscrit ?
+			</a>
+			<br>
+			<a href="aide.html">
+				Besoin d'aide ?
 			</a>
 		</center>
 
